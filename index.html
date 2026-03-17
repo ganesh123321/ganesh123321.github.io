@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ganesh Selvam M K | Backend Developer</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="loading">
+    <!-- Sleek Preloader -->
+    <div class="preloader">
+        <div class="loader-content">
+            <div class="spinner"></div>
+            <div class="loading-text">Initializing Systems... <span class="percent">0%</span></div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="#home" class="logo">Ganesh Selvam M K<span class="accent">.</span></a>
+            
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="resume.pdf" class="nav-btn btn-outline" download target="_blank">Resume</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero section">
+            <div class="hero-content">
+                <p class="hero-eyebrow">Backend Developer — IT Student</p>
+                <h1 class="hero-heading">Architecting systems that <span class="text-highlight">scale.</span></h1>
+                <p class="hero-description">
+                    I build robust, high-performance APIs and backend systems, turning complex logic into seamless server-side experiences.
+                </p>
+                <div class="hero-btns">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            
+            <div class="hero-graphics fade-up">
+                <div class="code-window">
+                    <div class="window-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="window-title">server.js</span>
+                    </div>
+                    <div class="window-body">
+<pre><code><span class="keyword">import</span> { <span>Developer</span> } <span class="keyword">from</span> <span class="string">'./core'</span>;
+
+<span class="keyword">const</span> <span>ganesh</span> = <span class="keyword">new</span> <span class="class">Developer</span>({
+  <span class="property">name</span>: <span class="string">"Ganesh Selvam M K"</span>,
+  <span class="property">role</span>: <span class="string">"Backend Engineer"</span>,
+  <span class="property">skills</span>: [<span class="string">"Java"</span>, <span class="string">"Python"</span>, <span class="string">"SQL"</span>],
+  <span class="property">focus</span>: [<span class="string">"Scalability"</span>, <span class="string">"Security"</span>]
+});
+
+<span class="keyword">await</span> <span>ganesh</span>.<span class="method">initializeSystems</span>();
+<span>console</span>.<span class="method">log</span>(<span class="string">"Ready to deploy."</span>);
+</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section">
+            <h2 class="section-title fade-up"><span class="section-number">01.</span> About Me</h2>
+            <div class="about-grid">
+                <div class="about-text fade-up">
+                    <p>Hello! I'm <strong>Ganesh</strong>, an aspiring software developer with a strong focus on backend engineering. Currently pursuing my B.Tech in IT at Rathinam Technical Campus, Coimbatore, I enjoy diving deep into server architectures, databases, and system performance.</p>
+                    <p>My goal is to design applications that not only solve problems but operate efficiently under the hood, ensuring smooth data flow and resilient API layers.</p>
+                    <div class="edu-card mt-30">
+                        <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="edu-details">
+                            <h3>B.Tech in Information Technology</h3>
+                            <p class="institution">Rathinam Technical Campus, Coimbatore</p>
+                            <p class="year">Expected Graduation: 2027</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image-wrapper fade-left">
+                    <div class="about-image">
+                        <!-- Professional icon or portrait placeholder -->
+                        <i class="fas fa-terminal"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills section">
+            <h2 class="section-title fade-up"><span class="section-number">02.</span> Technical Arsenal</h2>
+            <div class="skills-grid">
+                <div class="skill-card fade-up" style="transition-delay: 100ms;">
+                    <i class="fas fa-code skill-icon"></i>
+                    <h3>Programming</h3>
+                    <div class="tags">
+                        <span>Java</span>
+                        <span>Python</span>
+                        <span>C</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+                <div class="skill-card fade-up" style="transition-delay: 200ms;">
+                    <i class="fas fa-database skill-icon"></i>
+                    <h3>Base Concepts</h3>
+                    <div class="tags">
+                        <span>Data Structures</span>
+                        <span>Algorithms</span>
+                        <span>DBMS</span>
+                        <span>Operating Systems</span>
+                    </div>
+                </div>
+                <div class="skill-card fade-up" style="transition-delay: 300ms;">
+                    <i class="fas fa-server skill-icon"></i>
+                    <h3>Web & Backend</h3>
+                    <div class="tags">
+                        <span>Node.js</span>
+                        <span>REST APIs</span>
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                    </div>
+                </div>
+                <div class="skill-card fade-up" style="transition-delay: 400ms;">
+                    <i class="fas fa-tools skill-icon"></i>
+                    <h3>Tools & Ops</h3>
+                    <div class="tags">
+                        <span>Git</span>
+                        <span>GitHub</span>
+                        <span>Docker Basics</span>
+                        <span>VS Code</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects section">
+            <h2 class="section-title fade-up"><span class="section-number">03.</span> Featured Work</h2>
+            <div class="projects-grid">
+                
+                <div class="project-card fade-up">
+                    <div class="project-top">
+                        <div class="folder-icon"><i class="far fa-folder-open"></i></div>
+                        <div class="project-links">
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">E-commerce Backend API</h3>
+                    <p class="project-desc">A scalable REST API designed to manage robust product inventories, user authentication flows with JWT, and transaction processing simulating an e-commerce platform.</p>
+                    <div class="project-tech">
+                        <span>Node.js</span>
+                        <span>Express</span>
+                        <span>MongoDB</span>
+                    </div>
+                </div>
+
+                <div class="project-card fade-up" style="transition-delay: 100ms;">
+                    <div class="project-top">
+                        <div class="folder-icon"><i class="far fa-folder-open"></i></div>
+                        <div class="project-links">
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">DSA Implementations</h3>
+                    <p class="project-desc">A deep-dive repository featuring from-scratch implementations of fundamental and advanced data structures, heavily tested for memory efficiency and optimal runtime.</p>
+                    <div class="project-tech">
+                        <span>Java</span>
+                        <span>Algorithms</span>
+                        <span>JUnit</span>
+                    </div>
+                </div>
+
+                <div class="project-card fade-up" style="transition-delay: 200ms;">
+                    <div class="project-top">
+                        <div class="folder-icon"><i class="far fa-folder-open"></i></div>
+                        <div class="project-links">
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Smart IoT Systems</h3>
+                    <p class="project-desc">Embedded C modules designed to process peripheral signals with minimal latency. Prototyped for home automation environments focusing on fault tolerance.</p>
+                    <div class="project-tech">
+                        <span>C</span>
+                        <span>Embedded</span>
+                        <span>IoT</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+            <h2 class="section-title fade-up"><span class="section-number">04.</span> Get In Touch</h2>
+            <p class="contact-subtitle fade-up">I'm currently exploring new opportunities in backend engineering. Whether you have a question or just want to connect, feel free to drop a line.</p>
+            
+            <div class="contact-wrapper fade-up">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:ganeshselvammk@gmail.com">ganeshselvammk@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <a href="tel:+916369379710">+91 6369379710</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <span>Coimbatore, India</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" required placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" required placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" required placeholder="Message" rows="5"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-full">Send Message</button>
+                    <div id="form-status" class="form-status"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-social">
+            <a href="https://github.com/ganeshselvam" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/ganeshselvammk/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:ganeshselvammk@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p>Built by Ganesh Selvam M K &copy; 2026</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
