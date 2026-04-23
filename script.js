@@ -155,9 +155,28 @@ if (hamburger) {
 }
 
 /**
- * Contact Form Simulation
+ * EmailJS Integration — sends contact form data to your email
+ * 
+ * SETUP INSTRUCTIONS:
+ * 1. Go to https://www.emailjs.com/ and sign up (free).
+ * 2. Add your Gmail as an "Email Service" (note the Service ID).
+ * 3. Create an "Email Template" with these variables: {{from_name}}, {{reply_to}}, {{message}}
+ *    (note the Template ID).
+ * 4. Go to Account > General and copy your "Public Key".
+ * 5. Replace the 3 placeholders below with your actual IDs.
  */
+const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';   // Replace with your EmailJS public key
+const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';   // Replace with your EmailJS service ID
+const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID'; // Replace with your EmailJS template ID
+
+// Initialize EmailJS
+if (typeof emailjs !== 'undefined') {
+    emailjs.init(EMAILJS_PUBLIC_KEY);
+}
+
 const contactForm = document.getElementById('contactForm');
+const formStatus = document.getElementById('form-status');
+
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -166,22 +185,46 @@ if (contactForm) {
         
         btn.innerHTML = 'Sending...';
         btn.disabled = true;
-        
-        setTimeout(() => {
-            btn.innerHTML = 'Message Sent';
-            btn.style.backgroundColor = 'var(--accent)';
-            btn.style.borderColor = 'var(--accent)';
-            
-            contactForm.reset();
-            
-            setTimeout(() => {
-                btn.innerHTML = originalText;
-                btn.style.backgroundColor = '';
-                btn.style.borderColor = '';
-                btn.disabled = false;
-            }, 3000);
-            
-        }, 1500);
+
+        emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, contactForm)
+            .then(() => {
+                btn.innerHTML = '✓ Message Sent!';
+                btn.style.backgroundColor = '#10b981';
+                btn.style.borderColor = '#10b981';
+                contactForm.reset();
+
+                if (formStatus) {
+                    formStatus.textContent = 'Thank you! Your message has been sent successfully.';
+                    formStatus.style.color = '#10b981';
+                }
+
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.style.backgroundColor = '';
+                    btn.style.borderColor = '';
+                    btn.disabled = false;
+                    if (formStatus) formStatus.textContent = '';
+                }, 4000);
+            })
+            .catch((error) => {
+                btn.innerHTML = '✗ Failed to Send';
+                btn.style.backgroundColor = '#ef4444';
+                btn.style.borderColor = '#ef4444';
+
+                if (formStatus) {
+                    formStatus.textContent = 'Oops! Something went wrong. Please try again or email me directly.';
+                    formStatus.style.color = '#ef4444';
+                }
+
+                console.error('EmailJS error:', error);
+
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.style.backgroundColor = '';
+                    btn.style.borderColor = '';
+                    btn.disabled = false;
+                }, 4000);
+            });
     });
 }
 

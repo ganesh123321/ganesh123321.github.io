@@ -259,13 +259,13 @@
 
                 <form class="contact-form" id="contactForm">
                     <div class="form-group">
-                        <input type="text" id="name" required placeholder="Name">
+                        <input type="text" id="name" name="from_name" required placeholder="Name">
                     </div>
                     <div class="form-group">
-                        <input type="email" id="email" required placeholder="Email">
+                        <input type="email" id="email" name="reply_to" required placeholder="Email">
                     </div>
                     <div class="form-group">
-                        <textarea id="message" required placeholder="Message" rows="5"></textarea>
+                        <textarea id="message" name="message" required placeholder="Message" rows="5"></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary w-full">Send Message</button>
                     <div id="form-status" class="form-status"></div>
@@ -287,6 +287,7 @@
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
