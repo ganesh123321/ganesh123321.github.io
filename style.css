@@ -3,26 +3,26 @@
    ========================================================================== */
 :root {
     /* Color Palette */
-    --bg-color: #f8fafc;         /* Slate 50 */
-    --surface-color: #ffffff;    /* White */
-    --surface-light: #f1f5f9;    /* Slate 100 */
+    --bg-color: #09090b;         /* Zinc 950 */
+    --surface-color: #18181b;    /* Zinc 900 */
+    --surface-light: #27272a;    /* Zinc 800 */
     
-    --primary: #2563eb;          /* Blue 600 */
-    --primary-hover: #1d4ed8;    /* Blue 700 */
-    --accent: #10b981;           /* Emerald 500 */
+    --primary: #c084fc;          /* Purple 400 */
+    --primary-hover: #a855f7;    /* Purple 500 */
+    --accent: #f472b6;           /* Pink 400 */
     
-    --text-main: #0f172a;        /* Slate 900 */
-    --text-muted: #64748b;       /* Slate 500 */
+    --text-main: #f4f4f5;        /* Zinc 50 */
+    --text-muted: #a1a1aa;       /* Zinc 400 */
     
-    --border-color: rgba(0, 0, 0, 0.08);
+    --border-color: rgba(255, 255, 255, 0.08);
     
     /* Typography */
-    --font-sans: 'Inter', -apple-system, sans-serif;
+    --font-sans: 'Outfit', -apple-system, sans-serif;
     --font-mono: 'Fira Code', 'SF Mono', monospace;
     
     /* Utilities */
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --border-radius: 8px;
+    --border-radius: 12px;
     --nav-height: 80px;
     --max-width: 1100px;
 }
@@ -59,9 +59,15 @@ body {
     background-color: var(--bg-color);
     color: var(--text-main);
     font-family: var(--font-sans);
-    line-height: 1.7;
+    line-height: 1.8;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
+}
+
+p {
+    text-align: justify;
+    text-justify: inter-word;
+    letter-spacing: 0.01em;
 }
 
 body.loading {
@@ -78,6 +84,7 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--text-main);
     font-weight: 700;
     line-height: 1.2;
+    letter-spacing: -0.02em;
 }
 
 .section {
@@ -155,7 +162,7 @@ h1, h2, h3, h4, h5, h6 {
     top: 0;
     width: 100%;
     height: var(--nav-height);
-    background-color: rgba(255, 255, 255, 0.85); /* light glass */
+    background-color: rgba(9, 9, 11, 0.85); /* dark glass */
     backdrop-filter: blur(10px);
     z-index: 1000;
     transition: var(--transition);
@@ -208,14 +215,17 @@ h1, h2, h3, h4, h5, h6 {
 .nav-btn.btn-outline {
     border: 1px solid var(--primary);
     color: var(--primary);
-    padding: 8px 16px;
-    border-radius: 4px;
-    font-family: var(--font-mono);
+    padding: 10px 24px;
+    border-radius: 100px;
+    font-family: var(--font-sans);
     font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 .nav-btn.btn-outline:hover {
-    background-color: rgba(59, 130, 246, 0.1);
+    background-color: rgba(192, 132, 252, 0.1);
 }
 
 /* Hamburger */
@@ -257,13 +267,15 @@ h1, h2, h3, h4, h5, h6 {
    ========================================================================== */
 .btn {
     display: inline-block;
-    padding: 12px 28px;
+    padding: 14px 32px;
     font-size: 0.95rem;
     font-weight: 600;
-    border-radius: var(--border-radius);
+    border-radius: 100px;
     text-align: center;
     cursor: pointer;
     border: 1px solid transparent;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
 }
 
 .btn-primary {
@@ -273,7 +285,7 @@ h1, h2, h3, h4, h5, h6 {
 .btn-primary:hover {
     background-color: var(--primary-hover);
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+    box-shadow: 0 4px 15px rgba(192, 132, 252, 0.4);
 }
 
 .btn-secondary {
@@ -349,7 +361,13 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: -1px;
 }
 
-.text-highlight { color: var(--primary); }
+.text-highlight { 
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
 
 .hero-description {
     color: var(--text-muted);
@@ -381,7 +399,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .window-header {
-    background-color: rgba(255,255,255,0.05);
+    background-color: rgba(0,0,0,0.2);
     padding: 12px 15px;
     display: flex;
     align-items: center;
@@ -533,7 +551,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tags span {
-    background-color: rgba(59, 130, 246, 0.1);
+    background-color: rgba(192, 132, 252, 0.1);
     color: var(--primary);
     padding: 5px 12px;
     border-radius: 12px;
