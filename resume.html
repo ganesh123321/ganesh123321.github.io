@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ganesh Selvam M K - Resume</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -13,189 +12,236 @@
             color: #000;
             margin: 0;
             padding: 40px 20px;
-            line-height: 1.5;
+            line-height: 1.4;
         }
         .resume-container {
             max-width: 800px;
             margin: 0 auto;
             background-color: #fff;
-            padding: 50px;
+            padding: 40px 50px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         .header {
-            margin-bottom: 30px;
+            text-align: center;
+            margin-bottom: 20px;
         }
         .header h1 {
             font-size: 28px;
-            margin: 0 0 5px 0;
-            font-weight: 700;
-        }
-        .header h2 {
-            font-size: 18px;
-            margin: 0 0 15px 0;
-            font-weight: 400;
-            color: #333;
-        }
-        .contact-info {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            font-size: 14px;
-            margin-bottom: 10px;
-        }
-        .contact-info div {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        .section-title {
-            font-size: 16px;
+            margin: 0 0 8px 0;
             font-weight: 700;
             text-transform: uppercase;
-            border-bottom: 2px solid #000;
-            padding-bottom: 5px;
-            margin-top: 25px;
-            margin-bottom: 15px;
+        }
+        .contact-info {
+            font-size: 13px;
+            color: #444;
+            margin-bottom: 6px;
+        }
+        .contact-info a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .section-title {
+            font-size: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #0056b3;
+            border-bottom: 1.5px solid #0056b3;
+            padding-bottom: 3px;
+            margin-top: 22px;
+            margin-bottom: 10px;
         }
         .content-block {
             margin-bottom: 15px;
         }
-        .content-block p {
-            margin: 5px 0;
-            font-size: 14px;
+        .content-text {
+            font-size: 13.5px;
             text-align: justify;
+            margin: 0;
         }
         .flex-between {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-        }
-        .bold {
-            font-weight: 600;
-        }
-        ul {
-            margin: 5px 0;
-            padding-left: 20px;
             font-size: 14px;
         }
+        .bold {
+            font-weight: 700;
+        }
+        .italic {
+            font-style: italic;
+        }
+        .item-subtitle {
+            font-size: 13.5px;
+            font-style: italic;
+            color: #333;
+            margin-top: 2px;
+            margin-bottom: 2px;
+        }
+        ul {
+            margin: 4px 0 0 0;
+            padding-left: 20px;
+            font-size: 13.5px;
+        }
         li {
-            margin-bottom: 3px;
+            margin-bottom: 4px;
         }
-        .grid-2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
+        .skills-list {
+            font-size: 13.5px;
+            line-height: 1.6;
         }
-        .grid-3 {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 10px;
+        .skills-list span.bold {
+            margin-right: 5px;
         }
-        a {
-            color: inherit;
-            text-decoration: none;
+        .cert-item {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13.5px;
+            margin-bottom: 4px;
+        }
+        .cert-date {
+            font-style: italic;
+            color: #555;
+        }
+        .bullet-separator {
+            margin: 0 8px;
         }
     </style>
 </head>
 <body>
     <div class="resume-container">
         <div class="header">
-            <h1>Ganesh Selvam M K</h1>
-            <h2>Engineering Student</h2>
-            
+            <h1>GANESH SELVAM M K</h1>
             <div class="contact-info">
-                <div><i class="fas fa-envelope"></i> ganeshselvammk@gmail.com</div>
-                <div><i class="fas fa-phone-alt"></i> 6369379710</div>
-                <div><i class="fas fa-map-marker-alt"></i> Coimbatore</div>
+                ganeshselvammk@gmail.com | +91 6369379710 | Coimbatore, Tamil Nadu
             </div>
-            
             <div class="contact-info">
-                <div><i class="fab fa-linkedin"></i> linkedin.com/in/ganeshselvammk</div>
-                <div><i class="fab fa-github"></i> github.com/ganesh123321</div>
-                <div><i class="fas fa-link"></i> ganesh123321.github.io</div>
+                <a href="https://linkedin.com/in/ganeshselvammk" target="_blank">linkedin.com/in/ganeshselvammk</a> | 
+                <a href="https://github.com/ganesh123321" target="_blank">github.com/ganesh123321</a> | 
+                <a href="https://ganesh123321.github.io" target="_blank">ganesh123321.github.io</a>
             </div>
         </div>
 
-        <div class="section-title">CAREER OBJECTIVE</div>
+        <div class="section-title">PROFESSIONAL SUMMARY</div>
         <div class="content-block">
-            <p>Motivated and dedicated engineering student seeking an opportunity to apply my technical skills and knowledge in a professional environment. I aim to contribute to organizational growth while continuously improving my skills and gaining practical experience.</p>
+            <p class="content-text">Motivated B.Tech IT student with hands-on experience in Java, Python, and cybersecurity fundamentals. Passionate about building practical applications and solving real-world problems. Actively seeking internship or entry-level opportunities in software development or cybersecurity to apply and continuously grow technical skills.</p>
         </div>
 
         <div class="section-title">EDUCATION</div>
         <div class="content-block">
             <div class="flex-between">
-                <div><span class="bold">B Tech IT</span>, Rathinam Technical Campus</div>
-                <div>2023 – Present</div>
+                <div class="bold">B.Tech – Information Technology</div>
+                <div class="italic">2023 – Present (Expected 2027)</div>
             </div>
+            <div class="item-subtitle">Rathinam Technical Campus, Coimbatore</div>
             <ul>
-                <li>CGPA - 7.5 (Up to 4th semester)</li>
+                <li>CGPA: 7.5</li>
             </ul>
         </div>
+        
         <div class="content-block">
             <div class="flex-between">
-                <div><span class="bold">SSLC</span>, SKV Vidhyaasharam</div>
+                <div class="bold">HSC (12th Grade)</div>
+                <div class="italic">2022 – 2023</div>
             </div>
+            <div class="item-subtitle">SKV Vidhyaasharam</div>
             <ul>
-                <li>74.1%</li>
+                <li>Percentage: 74.1</li>
+            </ul>
+        </div>
+        
+        <div class="content-block">
+            <div class="flex-between">
+                <div class="bold">SSLC (10th Grade)</div>
+                <div class="italic">2020 – 2021</div>
+            </div>
+            <div class="item-subtitle">SKV Vidhyaasharam</div>
+            <ul>
+                <li>Percentage: 63</li>
             </ul>
         </div>
 
         <div class="section-title">TECHNICAL SKILLS</div>
-        <div class="content-block grid-2">
-            <ul>
-                <li>Java</li>
-                <li>C</li>
-            </ul>
-            <ul>
-                <li>Python</li>
-                <li>PostgreSQL</li>
-            </ul>
-        </div>
-
-        <div class="section-title">LANGUAGES</div>
-        <div class="content-block grid-2">
-            <ul>
-                <li>English</li>
-            </ul>
-            <ul>
-                <li>Tamil</li>
-            </ul>
+        <div class="content-block skills-list">
+            <div><span class="bold">Languages:</span> Java, Python, C</div>
+            <div><span class="bold">Database:</span> PostgreSQL</div>
+            <div><span class="bold">Frameworks & Libraries:</span> Streamlit, REST APIs</div>
+            <div><span class="bold">Tools & Platforms:</span> Git, GitHub, VS Code, Linux (basic), AWS (Cloud Foundations)</div>
         </div>
 
         <div class="section-title">PROJECTS</div>
         <div class="content-block">
-            <div class="bold">Expense Tracker</div>
+            <div class="flex-between">
+                <div class="bold">Expense Tracker</div>
+                <div class="italic">Java</div>
+            </div>
             <ul>
-                <li>Developed a console-based application to manage daily expenses</li>
-                <li>Implemented features for tracking and summarizing expenses .</li>
+                <li>Built a console-based application to record, categorize, and summarize daily expenses</li>
+                <li>Implemented dynamic data management using ArrayList and OOP principles (encapsulation, inheritance)</li>
+                <li>Enabled monthly summary reports to help users identify and manage spending patterns</li>
             </ul>
-            <p>Used Array List and OOP principles</p>
+        </div>
+
+        <div class="content-block">
+            <div class="flex-between">
+                <div class="bold">Weather Forecast Application</div>
+                <div class="italic">Python, Streamlit, OpenWeather API</div>
+            </div>
+            <ul>
+                <li>Built an interactive web app with city-based search and live GPS location detection for real-time weather updates</li>
+                <li>Integrated OpenWeather API with Celsius/Fahrenheit toggle and multilingual interface options</li>
+                <li>Deployed on Streamlit Cloud for public access without local installation</li>
+            </ul>
+        </div>
+
+        <div class="section-title">INTERNSHIP EXPERIENCE</div>
+        <div class="content-block">
+            <div class="flex-between">
+                <div class="bold">Cyber Security Intern – InternPe</div>
+                <div class="italic">Jun 2024 – Aug 2024</div>
+            </div>
+            <ul>
+                <li>Conducted vulnerability assessments using Nmap and Wireshark; documented findings using standard security reporting formats</li>
+                <li>Performed security testing, risk analysis, and system hardening following OWASP and NIST frameworks</li>
+                <li>Assisted in incident response exercises, log monitoring, and applied phishing prevention and data protection strategies</li>
+                <li>Gained practical exposure to ethical hacking, network security, attack vectors, and defensive cybersecurity practices</li>
+            </ul>
+        </div>
+
+        <div class="section-title">CERTIFICATIONS</div>
+        <div class="content-block">
+            <div class="cert-item">
+                <div>Cyber Security Internship Certificate – InternPe</div>
+                <div class="cert-date">2025</div>
+            </div>
+            <div class="cert-item">
+                <div>Cyber Security – Coursera</div>
+                <div class="cert-date">2026</div>
+            </div>
+            <div class="cert-item">
+                <div>AWS Cloud Foundations</div>
+                <div class="cert-date">2026</div>
+            </div>
+            <div class="cert-item">
+                <div>Prompt Engineering for ChatGPT – Coursera</div>
+                <div class="cert-date">2023</div>
+            </div>
         </div>
 
         <div class="section-title">SOFT SKILLS</div>
-        <div class="content-block grid-2">
-            <ul>
-                <li>Teamwork</li>
-                <li>Adaptability</li>
-            </ul>
-            <ul>
-                <li>Leadership</li>
-                <li>Time Management</li>
-            </ul>
+        <div class="content-block">
+            <div class="content-text">
+                Teamwork <span class="bullet-separator">•</span> Adaptability <span class="bullet-separator">•</span> Leadership <span class="bullet-separator">•</span> Time Management <span class="bullet-separator">•</span> Problem Solving
+            </div>
         </div>
 
-        <div class="section-title">Certificates</div>
-        <div class="content-block grid-3">
-            <ul>
-                <li>Cyber Security Internship- InternPe</li>
-                <li>Prompt Engineering for ChatGPT</li>
-            </ul>
-            <ul>
-                <li>Cloud Foundations - AWS</li>
-            </ul>
-            <ul>
-                <li>Cyber Security – Coursera</li>
-            </ul>
+        <div class="section-title">LANGUAGES</div>
+        <div class="content-block">
+            <div class="content-text">
+                English (Professional) <span class="bullet-separator">•</span> Tamil (Native)
+            </div>
         </div>
     </div>
 </body>
